@@ -1,1 +1,10 @@
 This is how I configure my vim environment.
+
+If you are cloning this on a new system, you must run
+the following command to get the submodules to show
+up in the bundle/ directory.
+
+  git submodule update --init
+
+here is a nice link to learn more about submodules:
+http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/
