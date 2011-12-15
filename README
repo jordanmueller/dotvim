@@ -2,6 +2,9 @@
 
 This is how I configure my vim environment.
 
+symlink your .vmirc to the vimrc file in the root of this
+repository.
+
 If you are cloning this on a new system, you must run
 the following commands in the roort of your repo
 to get the submodules to show up in the bundle/ directory.
