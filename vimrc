@@ -39,5 +39,3 @@ nnoremap <leader>p :set paste<CR>
 
 "remove the foldcolumn (artifact from vimdiff)
 nnoremap <leader>f :set foldcolumn=0<CR>
-
-
