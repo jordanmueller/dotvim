@@ -3,6 +3,11 @@
 "load all my modules with pathogen
 call pathogen#infect()
 
+"source a local .vim.custom file if it exists.
+if filereadable("/home/jordan/.vim.custom")
+    source ~/.vim.custom
+endif
+
 "liaison tab styling (everything is 4 spaces)
 set shiftwidth=4
 set tabstop=4
@@ -37,10 +42,8 @@ augroup save_state
     au BufWinEnter * silent loadview
 augroup END
 
-"mappings
-"set paste from insert and normal mode 
-inoremap <leader>p <esc>:set paste<CR>i
-nnoremap <leader>p :set paste<CR>
+"toggle paste setting
+set pastetoggle=<leader>p
 
 "remove the foldcolumn (artifact from vimdiff)
 nnoremap <leader>f :set foldcolumn=0<CR>
@@ -59,9 +62,8 @@ vnoremap <leader>' <esc>a'<esc>hbi'<esc>gvw
 nnoremap H ^
 nnoremap L $
 
-" get rid of <esc> 
+" call <esc> from the home row 
 inoremap jk <esc>
-inoremap <esc> <nop>
 
 " stop using arrow keys in vim
 nnoremap OA <nop>
@@ -79,4 +81,8 @@ augroup filetype_perl
     autocmd!
     autocmd FileType perl noremap <buffer> <localleader>c I#<esc>
     autocmd FileType perl noremap <buffer> <localleader>uc ^x
+    autocmd FileType perl noremap <buffer> <localleader>z :! perl -c '%'<cr>
 augroup END
+
+" open the previous buffer in a window to the right
+nnoremap <leader>pb :execute "rightbelow vsplit " . bufname("#")<cr>
