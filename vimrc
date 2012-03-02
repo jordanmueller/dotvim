@@ -25,7 +25,9 @@ set ruler
 set background=dark
 filetype plugin indent on
 syntax on
-set nohlsearch
+set hlsearch
+set incsearch
+nnoremap <leader>b :nohlsearch<cr>
 
 "Add syntastic messages to status line
 set statusline+=%#warningmsg#
@@ -86,3 +88,14 @@ augroup END
 
 " open the previous buffer in a window to the right
 nnoremap <leader>pb :execute "rightbelow vsplit " . bufname("#")<cr>
+
+" Add a semicolon to the end of a line
+nnoremap <leader>s :execute "normal! mqA;\e'q"<cr>
+
+" Find/Delete trailing whitespace
+nnoremap <leader>w :execute 'normal! gg/\v\s+$' . "\r"<cr>
+nnoremap <leader>W :.s/\v\s+$//<cr>
+
+" make all serches very magic (expected regex behavior)
+" and clear out previous search highlighting
+nnoremap / :nohlsearch<cr>/\v
