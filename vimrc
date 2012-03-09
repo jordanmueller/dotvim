@@ -37,15 +37,11 @@ set statusline+=%*
 "remember some stuff
 set viminfo=%,'50,\"100,n~/.viminfo
 
-" save file state for next time you open
-augroup save_state
-    autocmd!
-    au BufWinLeave * mkview
-    au BufWinEnter * silent loadview
-augroup END
-
 "toggle paste setting
 set pastetoggle=<leader>p
+
+"toggle the list parameter
+nnoremap <leader>l :set list!<CR>
 
 "remove the foldcolumn (artifact from vimdiff)
 nnoremap <leader>f :set foldcolumn=0<CR>
@@ -99,3 +95,9 @@ nnoremap <leader>W :.s/\v\s+$//<cr>
 " make all serches very magic (expected regex behavior)
 " and clear out previous search highlighting
 nnoremap / :nohlsearch<cr>/\v
+
+" grep for the word you are on.
+nnoremap <leader>g :silent execute "grep! -R --exclude-dir=.git --exclude-dir=.svn " . shellescape("<cWORD>") . " ."<cr>:copen<cr>
+nnoremap <leader>cn :cnext<cr>
+nnoremap <leader>cp :cprevious<cr>
+nnoremap <leader>cc :cclose<cr>
