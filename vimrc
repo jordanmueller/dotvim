@@ -97,7 +97,7 @@ nnoremap <leader>W :.s/\v\s+$//<cr>
 nnoremap / :nohlsearch<cr>/\v
 
 " grep for the word you are on.
-nnoremap <leader>g :silent execute "grep! -R --exclude-dir=.git --exclude-dir=.svn " . shellescape("<cWORD>") . " ."<cr>:copen<cr>
+nnoremap <leader>g :silent execute "grep! -R --exclude=*\.git* --exclude=*\.svn* " . shellescape("<cWORD>") . " ."<cr>:copen<cr>
 nnoremap <leader>cn :cnext<cr>
 nnoremap <leader>cp :cprevious<cr>
 nnoremap <leader>cc :cclose<cr>
