@@ -43,6 +43,9 @@ set pastetoggle=<leader>p
 "toggle the list parameter
 nnoremap <leader>l :set list!<CR>
 
+"source the current file
+nnoremap <leader>sf :source %<CR>
+
 "remove the foldcolumn (artifact from vimdiff)
 nnoremap <leader>f :set foldcolumn=0<CR>
 
@@ -97,7 +100,6 @@ nnoremap <leader>W :.s/\v\s+$//<cr>
 nnoremap / :nohlsearch<cr>/\v
 
 " grep for the word you are on.
-nnoremap <leader>g :silent execute "grep! -R --exclude=*\.git* --exclude=*\.svn* " . shellescape("<cWORD>") . " ."<cr>:copen<cr>
 nnoremap <leader>cn :cnext<cr>
 nnoremap <leader>cp :cprevious<cr>
 nnoremap <leader>cc :cclose<cr>
