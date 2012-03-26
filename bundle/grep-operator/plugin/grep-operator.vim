@@ -16,7 +16,7 @@ function! s:GrepOperator(type)
     endif
 
 
-    silent execute "grep! -R " . shellescape(@@) . " ."
+    silent execute "grep! -R --exclude=*\.git* --exclude=*\.svn* " . shellescape(@@) . " ."
     copen
 
     let @@ = saved_unnamed_register 
