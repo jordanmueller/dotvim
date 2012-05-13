@@ -1,4 +1,4 @@
-"jordan's little vimrc
+"jordan's little vimrc 
 
 "load all my modules with pathogen
 call pathogen#infect()
@@ -83,6 +83,12 @@ augroup filetype_perl
     autocmd FileType perl noremap <buffer> <localleader>c I#<esc>
     autocmd FileType perl noremap <buffer> <localleader>uc ^x
     autocmd FileType perl noremap <buffer> <localleader>z :! perl -c '%'<cr>
+augroup END
+
+" brightscript syntax highlighting
+augroup filetype_brs
+    autocmd!
+    autocmd BufNewFile,BufRead *.brs setf brs
 augroup END
 
 " open the previous buffer in a window to the right
