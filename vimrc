@@ -8,16 +8,16 @@ if filereadable("/home/jordan/.vim.custom")
     source ~/.vim.custom
 endif
 
-"liaison tab styling (everything is 4 spaces)
-set shiftwidth=4
-set tabstop=4
+"Jordan tab styling (everything is 2 spaces)
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set shiftround
 set copyindent
 
 "handle indenting
 set autoindent
-set smartindent
+set cindent
 inoremap # X#
 
 "visual things
