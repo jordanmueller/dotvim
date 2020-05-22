@@ -10,3 +10,6 @@
 [submodule "bundle/dbext"]
 	path = bundle/dbext
 	url = git://github.com/vim-scripts/dbext.vim.git
+[submodule "bundle/vim-beancount"]
+	path = bundle/vim-beancount
+	url = https://github.com/nathangrigg/vim-beancount.git
