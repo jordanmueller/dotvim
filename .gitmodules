@@ -1,15 +1,15 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
+	url = https://github.com/scrooloose/syntastic.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
-	url = git://github.com/vim-scripts/matchit.zip.git
+	url = https://github.com/vim-scripts/matchit.zip.git
 [submodule "bundle/dbext"]
 	path = bundle/dbext
-	url = git://github.com/vim-scripts/dbext.vim.git
+	url = https://github.com/vim-scripts/dbext.vim.git
 [submodule "bundle/vim-beancount"]
 	path = bundle/vim-beancount
 	url = https://github.com/nathangrigg/vim-beancount.git
