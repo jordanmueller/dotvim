@@ -3,13 +3,15 @@ This is how I configure my vim environment
 
 Steps to get this working on a new system:
 
-    git clone git://github.com/jordanmueller/dotvim.git
-    cd ~
-    ln -s [your path to dotvim] .vim
-    ln -s [your path to dotvim]/vimrc .vimrc
-    cd .vim
-    git submodule init
-    git submodule update
+    $ git clone git://github.com/jordanmueller/dotvim.git
+    $ cd ~
+    $ ln -s [your path to dotvim] .vim
+    $ ln -s [your path to dotvim]/vimrc .vimrc
+
+    # If the clone didn't autmatically pull the submodules
+    $ cd .vim
+    $ git submodule init
+    $ git submodule update
 
 here is a nice link to learn more about submodules:
 http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/
